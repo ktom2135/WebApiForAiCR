@@ -28,4 +28,9 @@ public class WeatherForecastController : ControllerBase
 
         return no_reason_name;
     }
+
+    private void UseLessMethod()
+    {
+        var a = 1;
+    }
 }
