@@ -33,4 +33,22 @@ public class WeatherForecastController : ControllerBase
     {
         var a = 1;
     }
+    
+    private long UseLessMethod_()
+    { 
+        FileStream fs = new FileStream("test.txt", FileMode.OpenOrCreate, FileAccess.ReadWrite);
+        fs.Dispose();
+        var len = fs.Length;
+
+        return len;
+    }
+    private async Task AsyncTest()
+    {
+        await Task.FromResult(() => { });
+    }
+
+    public async Task TastAsync()
+    {
+        await AsyncTest();
+    }
 }
